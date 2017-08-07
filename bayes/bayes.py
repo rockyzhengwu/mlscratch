@@ -78,7 +78,10 @@ def test():
     print("doc:", pre)
     pre_2 = predict(class_prob, word_prob, vocab,doc_2)
     print("doc_w", pre_2)
-test()
+
+if __name__ == "__main__":
+    test()
+
 """
 实现考虑了多类别问题，
 这个方法里面没有考虑词的多次出现，如果一个词出现多次也按照一次计算

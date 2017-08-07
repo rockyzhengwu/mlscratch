@@ -93,12 +93,14 @@ def classify(tree, labels, test_vec):
                 class_label = sub_dict[key]
     return class_label
 
-data, labels = load_data()
-tree = create_tree(data, labels)
-print(tree)
-res = classify(tree, labels, [1, 0])
-res = classify(tree, labels, [1, 1])
-print(res)
+
+if __name__ == "__main__":
+    data, labels = load_data()
+    tree = create_tree(data, labels)
+    print(tree)
+    res = classify(tree, labels, [1, 0])
+    res = classify(tree, labels, [1, 1])
+    print(res)
 
 """
 这段代码说清楚了决策树的大致思想，还有一些变种和过拟合问题
