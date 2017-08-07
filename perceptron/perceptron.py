@@ -17,8 +17,8 @@ class Perceptron(object):
         self.bias = random.random()
 
         # 用0 初始化
-        # self.weights = [0.0 for _ in range(input_nums)]
-        # self.bias = 0.0
+        self.weights = [0.0 for _ in range(input_nums)]
+        self.bias = 0.0
 
     def train(self, x, y , epochs, rate):
         for step in range(epochs):
@@ -44,8 +44,6 @@ class Perceptron(object):
             self.weights = [w + delta*v for w, v in zip(self.weights, vec) ]
             self.bias = self.bias + err * rate
         return right_nums
-
-
 
 x, y = load_data()
 perceptron = Perceptron(len(x[0]))
