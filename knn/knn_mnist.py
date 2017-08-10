@@ -21,8 +21,8 @@ def load_data(file_path):
     return X, Y
 
 def test_mnist():
-    train_x, train_y = load_data("digits/trainingDigits")
-    test_x, test_y = load_data("digits/testDigits")
+    train_x, train_y = load_data("../data/digits/trainingDigits")
+    test_x, test_y = load_data("../data/digits/testDigits")
     pre_list = []
     for x , y in zip(test_x , test_y):
         pre = knn.knn(x, train_x, train_y, 1)
