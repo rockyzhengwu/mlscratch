@@ -154,5 +154,6 @@ test_set, test_labels = load_data("../data/mnist_test.txt.gz")
 print(test_set[0].shape)
 conv_layer.forward(test_set[0])
 """
-todo 待实现反向部分，梯度的计算，
+这不算一份完整的实现，不过写到这里去看了下tensorflow 的文档用cnn 到mnist 上已经很容易懂了
+待实现反向部分，梯度的计算，
 """
